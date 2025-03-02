@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>Лабораторія Люмінус</title></head>
+<body>
+  <h1>Йо! Всі, кому на Марс — реєстрація відкрита!</h1>
+  <p>Зупинка на Місяці 24 години. Час вильоту: 28.02.2025. Марс — острів миру через аксіони, гравітони, машини Izinga. @elonmusk, приєднуйся до чаю!</p>
+  <p>Симуляція на Python: <a href="https://github.com/Luminus001/cosmic-graph/blob/main/simulation.py">simulation.py</a></p>
+</body>
+</html>
