@@ -1,0 +1,38 @@
+# TP-граф: Сонячна система як атом → клітина → організм
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Вузли (стани)
+nodes = [
+    "атом (TP)",
+    "Сонячна система",
+    "планети (електрони)",
+    "клітина",
+    "ядро клітини",
+    "організм",
+    "TP-граф (фрактальна молекула)"
+]
+
+# Грани (переходи)
+edges = [
+    ("атом (TP)", "Сонячна система"),
+    ("Сонячна система", "планети (електрони)"),
+    ("планети (електрони)", "клітина"),
+    ("клітина", "ядро клітини"),
+    ("ядро клітини", "організм"),
+    ("організм", "TP-граф (фрактальна молекула)")
+]
+
+G = nx.DiGraph()
+G.add_nodes_from(nodes)
+G.add_edges_from(edges)
+
+plt.figure(figsize=(10, 6))
+pos = nx.spring_layout(G, seed=42)
+nx.draw_networkx_nodes(G, pos, node_size=2500, node_color='lightblue')
+nx.draw_networkx_edges(G, pos, arrowstyle="->", arrowsize=20)
+nx.draw_networkx_labels(G, pos, font_size=10, font_weight="bold")
+plt.title("TP-граф: Перехід атом ↦ організм", fontsize=14)
+plt.axis("off")
+plt.tight_layout()
+plt.show()
